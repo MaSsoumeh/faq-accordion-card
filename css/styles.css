@@ -48,9 +48,12 @@ h1 {
 }
 
 /* Card */
+.box {
+  display: none;
+}
 .card {
   margin: 0 auto;
-  box-shadow: 10px 10px 20px 5px var(--color-grad-blue);
+  box-shadow: 0 15px 50px -15px black;
   background-color: white;
   border-radius: 30px;
   width: 335px;
@@ -59,6 +62,7 @@ h1 {
 .card__body {
   text-align: left;
   padding: 2rem;
+  /* overflow-y: auto; */
 }
 .card__body__heading {
   text-align: center;
@@ -66,12 +70,17 @@ h1 {
 .card__body__text {
   margin-top: 1rem;
 }
+
 .divider {
   border-top: 1px solid var(--divider-color);
 }
-.card__hero {
+.card__hero__mobile {
   position: relative;
 }
+.card__hero__desktop {
+  display: none;
+}
+
 .question-part {
   display: flex;
   justify-content: space-between;
@@ -108,4 +117,63 @@ h1 {
 }
 .rotate-arrow {
   transform: rotate(180deg);
+}
+@media screen and (min-width: 1300px) {
+  html {
+    height: 100vh;
+  }
+  main {
+    margin-top: 10%;
+  }
+  .box {
+    display: block;
+  }
+  .card {
+    width: 1000px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 500px 500px;
+  }
+  .card__hero__mobile {
+    display: none;
+  }
+  .card__hero__desktop {
+    display: block;
+    position: relative;
+  }
+  .card__hero__container {
+    position: relative;
+    overflow: hidden;
+  }
+  .pattern__container {
+    width: 500px;
+    height: 540px;
+  }
+  .pattern__container img {
+    position: absolute;
+    left: -550px;
+    bottom: -30%;
+  }
+  .card__hero__illustration {
+    position: absolute;
+    top: 80px;
+    left: -15%;
+  }
+  .box__container {
+    position: relative;
+    top: -60%;
+  }
+  .box {
+    position: absolute;
+    top: 220px;
+    left: -90px;
+  }
+  .card__body {
+    padding-right: 8rem;
+  }
+  .card__body__heading {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
 }
