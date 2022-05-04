@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live URL](https://your-live-site-url.com)
+- Live Site URL: [Live URL](https://faqcard-challenge.netlify.app)
 
 ### Built with
 
